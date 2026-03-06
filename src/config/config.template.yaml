@@ -1,0 +1,25 @@
+# 应用程序配置文件
+# 请根据您的实际环境修改以下配置
+
+# LLM 配置
+llm:
+  api_url: "https://your-llm-api-endpoint/chat/completions"  # 替换为您的 LLM API 地址
+  api_key: "your-api-key-here"                              # 替换为您的 API 密钥
+  model_name: "gpt-4"
+  temperature: 0.7
+  max_tokens: 2000
+  timeout: 120
+  retry_attempts: 3
+  retry_delay: 2
+  stream: false
+
+# MCP (Model Context Protocol) 配置
+mcp:
+  url: "http://127.0.0.1:8005/sse"                          # MCP 服务地址
+  timeout: 30
+  retry_attempts: 2
+
+# 应用程序通用配置
+app:
+  debug: false
+  log_level: "INFO"
